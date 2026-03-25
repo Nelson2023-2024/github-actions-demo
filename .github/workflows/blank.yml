@@ -1,9 +1,9 @@
-name: Hello world
+name: Hello world # Just the workflow name (what you see in GitHub UI).
 
-on: workflow_dispatch
+on: workflow_dispatch # Defines when the workflow runs.
 jobs:
   hello:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Hello Step
-        run echo "Welcome to Github Actions"
+        run: echo "Welcome to Github Actions"
