@@ -6,18 +6,20 @@ jobs:
     runs-on: ubuntu-latest # a job runs on a runner(VM)
     steps:
       - name: Build step
-        run: echo "A demo build"
+        run: echo "Building........."
 
   test: # name of th job
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Test Phase
-        run: echo "Runninf Test cases"
+        run: echo "Testing.........."
 
   deploy:
     runs-on: ubuntu-latest
+    needs: test
     steps:
-      - name: Deployment Phase
-        run: echo "Deploying the app"
+      # - name: Deployment Phase
+        - run: echo "Deploying......"
   
         
