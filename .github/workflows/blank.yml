@@ -2,10 +2,22 @@ name: Hello world # Just the workflow name (what you see in GitHub UI).
 
 on: workflow_dispatch # Defines when the workflow runs. (manual trigger)
 jobs:
-  hello: # name of the job
-    runs-on: ubuntu-latest # runner where te job should run. spin up a fresh virtual machine running Linux to execute your code.
-    steps: 
-      - name: Hello Step # name of the step
-        run: |
-          echo "Line 1"
-          echo "Line 2"
+  build: # name of the job
+    runs-on: ubuntu-latest # a job runs on a runner(VM)
+    steps:
+      - name: Build step
+        run: echo "A demo build"
+
+  test: # name of th job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "Runninf Test cases"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Phase
+        run: echo "Deploying the app"
+  
+        
