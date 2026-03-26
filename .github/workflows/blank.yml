@@ -11,9 +11,11 @@ on:
   #     - main
 
 jobs:
-  build: # name of the job
+  action-demo: # name of the job
     runs-on: ubuntu-latest # a job runs on a runner(VM)
     steps:
-      - name: Build step
-        run:  echo "Hello, ${{secrets.GITHUB_TOKEN}}"
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print index.html file
+        run: cat index.html
             
