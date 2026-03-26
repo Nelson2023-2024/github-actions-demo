@@ -6,13 +6,13 @@ on:
       - main
       - dev
       - "release/**" # all branchhes beginnig with release
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   build: # name of the job
     runs-on: ubuntu-latest # a job runs on a runner(VM)
     steps:
       - name: Build step
-        run: echo "Building........."
+        run: echo "Hello, ${{vars.MY_NAME}}"
