@@ -14,7 +14,7 @@ jobs:
   action-demo: # name of the job
     runs-on: ubuntu-latest # a job runs on a runner(VM)
     steps:
-      - name: Checkout the code
+      - name: Checkout the code # is a pre-written script (an Action) created by GitHub that performs a git clone of your repository into that empty Virtual Machine.
         uses: actions/checkout@v4
       - name: Print index.html file
         run: cat index.html
