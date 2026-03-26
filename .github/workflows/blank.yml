@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest # a job runs on a runner(VM)
     steps:
       - name: Build step
-        run:  echo "Hello, ${{secrets.POSTGRES_PASSWORD}}"
+        run:  echo "Hello, ${{secrets.GITHUB_TOKEN}}"
             
