@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest # runner where te job should run. spin up a fresh virtual machine running Linux to execute your code.
     steps: 
       - name: Hello Step # name of the step
-        run: echo "Welcome to Github Actions" # what the step should do
+        run: |
+          echo "Line 1"
+          echo "Line 2"
